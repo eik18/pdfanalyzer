@@ -25,8 +25,8 @@ class pdfanalysis():
                     xref_location_error['msg']='xref not in expected location'
                     break
                 else:
-                     xref_location_error['error']=False
-                     xref_location_error['msg']='xref\'s in expected locations'
+                    xref_location_error['error']=False
+                    xref_location_error['msg']='xref\'s in expected locations'
         elif num_xref==0:
             xref_location_error['error']=True
             xref_location_error['msg']='xref locations not found'
@@ -64,8 +64,11 @@ class pdfanalysis():
         else: 
             xref_content_error={'error':True,'msg':'Xref contents not found'}
         self.messaging_queue.append(xref_content_error)
-               
+            
+'''add re.findall('(?<=\d \d obj\n)[\S\s]*?(?=endobj)',string)
 
+
+'''
          
 
 
